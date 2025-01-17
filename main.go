@@ -1,11 +1,10 @@
- package main
+package main
 
 import (
 	"fmt"
 	"io"
 	"os"
 	"path/filepath"
-	
 )
 
 // copyDirectory recursively copies a directory and its contents.
@@ -85,7 +84,6 @@ func main() {
 	// Notify user the process has started
 	fmt.Println("Hang tight while your environment bakes in the oven for a bit...")
 
-
 	// List of environments.
 	environments := []string{"SANDBOX_", "DEV_", "STAGE_", "PREPROD_", "PROD_"}
 
@@ -99,8 +97,8 @@ func main() {
 			fmt.Printf("Failed to create environment directory '%s': %v\n", envDirName, err)
 			continue
 		}
-	// Notify user the process has started
-	fmt.Println("Still cooking...")
+		// Notify bunghole the process has started
+		fmt.Println("Still cooking...")
 		// Copy the directory.
 		err = copyDirectory(directoryName, envDirPath)
 		if err != nil {
@@ -111,4 +109,3 @@ func main() {
 
 	fmt.Println("Environment setup completed successfully!")
 }
-
