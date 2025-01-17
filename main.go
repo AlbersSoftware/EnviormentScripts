@@ -81,7 +81,7 @@ func main() {
 		fmt.Printf("Failed to create solution directory: %v\n", err)
 		return
 	}
-	// Notify user the process has started
+	// Notify bunhole the process has started
 	fmt.Println("Hang tight while your environment bakes in the oven for a bit...")
 
 	// List of environments.
@@ -97,7 +97,7 @@ func main() {
 			fmt.Printf("Failed to create environment directory '%s': %v\n", envDirName, err)
 			continue
 		}
-		// Notify bunghole the process has started
+		// Notify bunghole after each enviorment is made that we still cooking up
 		fmt.Println("Still cooking...")
 		// Copy the directory.
 		err = copyDirectory(directoryName, envDirPath)
